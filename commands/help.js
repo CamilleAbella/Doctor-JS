@@ -2,14 +2,14 @@
 const {Command} = require('doctor-handler')
 
 module.exports = new Command({
-    alias : ['help'],
+    aliases : 'help',
     call : message => {
         // command list split by permission & by category
         // send to DM
     },
     subs : [
         {
-            alias : ['here', 'ici'],
+            aliases : ['here', 'ici'],
             call : message => {
                 // command list split by permission & by category
                 // send to channel
@@ -17,7 +17,7 @@ module.exports = new Command({
         }
     ].concat(Command.array().map(command => {
         return {
-            alias : command.alias,
+            aliases : command.alias,
             call : message => {
                 // command detail
             }
