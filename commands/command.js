@@ -2,25 +2,25 @@
 const {Command} = require('doctor-handler')
 
 module.exports = new Command({
-    alias : ['command','cmd'],
+    aliases : ['command','cmd'],
     call : message => {
         // code
     },
     subs : [
         {
-            alias : ['add'],
+            aliases : ['add','-a'],
             call : message => {
                 // code
             }
         },
         {
-            alias : ['list'],
+            aliases : ['list','-l'],
             call : message => {
                 // code
             }
         },
         {
-            alias : ['remove'],
+            aliases : ['remove','-r'],
             call : message => {
                 // code
             }
